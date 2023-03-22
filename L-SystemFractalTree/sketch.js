@@ -1,18 +1,56 @@
-// variable: A B
-// axiom: A
-// rules: (A->AB), (B->A)
-let angle 
 let rules = [];
-let axiom = "F";
-rules[0] = {
-    a: "F",
-    b: "FF+[+F-F-F]-[-F+F+F]",
-};
+// koch curve 
+// variables: F 
+// constants: - +
+// start: F
+// rules: (F → F+F−F−F+F)
+    // let axiom = "F";
+    // let degrees = 90
+    // rules[0] = {
+    //     a: "F",
+    //     b: "F+F-F-F+F",
+    // };
+
+//fractal plant
+// variable: X F
+// constants: = + []
+//start: X
+// rules: (X → F+[[X]-X]-F[-FX]+X), (F → FF)
+//angle is 25 degrees
+
+    let axiom = "X";
+    let degrees = 25
+    rules[0] = {
+        a: "X",
+        b: "F+[[X]-X]-F[-FX]+X",
+    };
+    rules[1]= {
+        a: "F",
+        b: "FF"
+    }
+
+//dragon curve
+//variable: F G
+//constants: + -
+//start: F
+//rules: (F → F+G), (G → F-G)
+    // let axiom = "F"
+    // let degrees = 90
+    // rules[0]={
+    //     a:"F",
+    //     b:"F+G"
+    // }
+    // rules[1] ={
+    //     a:"G",
+    //     b:"F-G"
+    // }
+//
+
+
+
+let angle 
 let len = 50;
-// rules[1] = {
-//     a: "B",
-//     b: "A",
-// };
+
 let sentence = axiom;
 const generate = () => {
     len *= 0.65
@@ -38,11 +76,12 @@ const generate = () => {
 
 function turtle() {
     translate(width/2, height)
+    // translate(width/2,height/2)
     background(55)
     stroke(255)
     for (let i = 0; i < sentence.length; i++) {
         let current = sentence.charAt(i);
-        if (current == "F") {
+        if (current == "F" || current == "G") {
             line(0, 0, 0, -len);
             translate(0, -len);
         } else if (current == "+") {
@@ -59,7 +98,7 @@ function turtle() {
 
 function setup() {
     // noCanvas();
-    angle = radians(25)
+    angle = radians(degrees)
     createCanvas(500, 500);
     background(55);
     createP(axiom);
