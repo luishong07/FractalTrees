@@ -6,8 +6,8 @@ class Tree {
         for (let i = 0; i < 500; i++) {
             this.leaves.push(new Leaf());
         }
-        // let pos = createVector(width / 2, height);
-        let pos = createVector(width / 2, height/2);
+        let pos = createVector(0,0);
+        // let pos = createVector(width / 2, height/2);
         let dir = createVector(0, -1);
         let root = new Branch(null, pos, dir);
         this.branches.push(root);

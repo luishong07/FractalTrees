@@ -18,7 +18,7 @@ class Branch {
         if (this.parent != null) {
             stroke(255,0,0);
             // strokeWeight(4);
-            line(this.pos.x, this.pos.y, this.parent.pos.x, this.parent.pos.y);
+            line(this.pos.x, this.pos.y,this.pos.z, this.parent.pos.x, this.parent.pos.y, this.parent.pos.z);
             // fill(255,0,0)
             // ellipse(this.pos.x, this.pos.y, 5,5)
         }
