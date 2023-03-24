@@ -1,69 +1,20 @@
-let rules = [];
-// koch curve 
-// variables: F 
-// constants: - +
-// start: F
-// rules: (F → F+F−F−F+F)
-    // let axiom = "F";
-    // let degrees = 90
-    // rules[0] = {
-    //     a: "F",
-    //     b: "F+F-F-F+F",
-    // };
-
-//fractal plant
-// variable: X F
-// constants: = + []
-//start: X
-// rules: (X → F+[[X]-X]-F[-FX]+X), (F → FF)
-//angle is 25 degrees
-
-    // let axiom = "X";
-    // let degrees = 25
-    // rules[0] = {
-    //     a: "X",
-    //     b: "F+[[X]-X]-F[-FX]+X",
-    // };
-    // rules[1]= {
-    //     a: "F",
-    //     b: "FF"
-    // }
-
-//dragon curve
-//variable: F G
-//constants: + -
-//start: F
-//rules: (F → F+G), (G → F-G)
-    // let axiom = "F"
-    // let degrees = 90
-    // rules[0]={
-    //     a:"F",
-    //     b:"F+G"
-    // }
-    // rules[1] ={
-    //     a:"G",
-    //     b:"F-G"
-    // }
+let rules = []
 //sierpinski triangle
 // variables: A B
 // constants: + -
 // start: A
 // rules: (A → B-A-B), (B → A+B+A)
 // angle: 60
-    // let axiom = "A"
-    // let degrees = 60
-    // rules[0] = {
-    //     a:"A",
-    //     b:"B-A-B"
-    // }
-    // rules[1] = {
-    //     a:"B",
-    //     b:"A+B+A"
-    // }
-
-
-
-
+    let axiom = "A"
+    let degrees = 60
+    rules[0] = {
+        a:"A",
+        b:"B-A-B"
+    }
+    rules[1] = {
+        a:"B",
+        b:"A+B+A"
+    }
 let angle 
 let len = 50;
 
